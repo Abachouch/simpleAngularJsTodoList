@@ -9,15 +9,18 @@
 
   <title>Document</title>
   <script src="app/js/angular.min.js"></script>
-  <style>
-  </style>
+  
   <link rel="stylesheet" href="app/style/style.css">
+  <style>
+     </style>
 </head>
 
 <body>
   <div class="container" ng-app="todo" ng-controller="manageTodo">
 
-
+    <form ng-submit="saveTodo()" class="frm-new">
+      <input class="txt-new" type="text" ng-model="newTask" placeholder="add new task" >
+    </form>
 
     <todo ng-repeat="t in allTodo" task="t"></todo>
 
@@ -30,17 +33,17 @@
 
 <script>
   
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function() {
-      navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
-        // Registration was successful
-        console.log('ServiceWorker registration successful with scope: ', registration.scope);
-      }, function(err) {
-        // registration failed :(
-        console.log('ServiceWorker registration failed: ', err);
-      });
-    });
-  }
+  // if ('serviceWorker' in navigator) {
+  //   window.addEventListener('load', function() {
+  //     navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+  //       // Registration was successful
+  //       console.log('ServiceWorker registration successful with scope: ', registration.scope);
+  //     }, function(err) {
+  //       // registration failed :(
+  //       console.log('ServiceWorker registration failed: ', err);
+  //     });
+  //   });
+  // }
 </script>
 
 </html> 
