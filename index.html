@@ -8,10 +8,10 @@
   <link rel="manifest" href="manifest.json">
 
   <title>Document</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <script src="app/js/angular.min.js"></script>
   <style>
   </style>
-  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="app/style/style.css">
 </head>
 
 <body>
@@ -23,30 +23,24 @@
 
   </div>
 </body>
-<script src="js/CRUD-localStorage.js"></script>
-<script src="js/modules.js"></script>
-<script src="js/controllers.js"></script>
-<script src="js/directives/task-directive.js"></script>
+<script src="app/js/CRUD-localStorage.js"></script>
+<script src="app/js/modules.js"></script>
+<script src="app/js/controllers.js"></script>
+<script src="app/js/directives/task-directive.js"></script>
 
 <script>
   
-  
-
-  
-
-  //
-  // for(i=0 ; i<100 ;i++) addTodo('todo'+i)
-</script>
-
-
-
-<script>
-  
-    if('serviceWorker' in navigator) {
-      navigator.serviceWorker
-               .register('/service-worker.js')
-               .then(function() { console.log("Service Worker Registered"); });
-    }
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+        // Registration was successful
+        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+      }, function(err) {
+        // registration failed :(
+        console.log('ServiceWorker registration failed: ', err);
+      });
+    });
+  }
 </script>
 
 </html> 

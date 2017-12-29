@@ -1,7 +1,7 @@
 app.directive("todo", function() {
     return {
       restrict: "E",
-      templateUrl: "js/directives/task-template.html",
+      templateUrl: "app/js/directives/task-template.html",
       scope: {
         title: '=task'
       },
