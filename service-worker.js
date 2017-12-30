@@ -4,7 +4,7 @@ var urlsToCache = [
   'https://abachouch.github.io/simpleAngularJsTodoList/' ,
   './',
   'index.html',
-  '/app/style/style.css',
+  'app/style/style.css',
   'app/js/angular.min.js' ,
   'app/js/directives/task-directive.js',
   'app/js/directives/task-template.html',
