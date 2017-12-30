@@ -1,18 +1,30 @@
 app.controller('manageTodo', function($scope) {
-    $scope.firstName = "John";
-    $scope.lastName = about();
-    $scope.allTodo = getAllTodo().reverse();
+    $scope.isEditable = false ;
+    $scope.isErrDuplicat = false;
+    $scope.hideErrDuplica = function(){$scope.isErrDuplicat = false;}
+    //
+    $scope.allTodo = getAllTodo();
+
+    //delete todo
     $scope.$on('removeTask' , function(){
-      $scope.allTodo = getAllTodo().reverse();
+      $scope.allTodo = getAllTodo();
     });
-    
+    //save todo
     $scope.saveTodo = function() {
       if(this.newTask) {
-        addTodo($scope.newTask) ;
-        console.log('adding : '+$scope.newTask) ;
-        $scope.allTodo = getAllTodo().reverse();
+        if(addTodo($scope.newTask)){
+          console.log('adding : '+$scope.newTask) ;
+          $scope.allTodo = getAllTodo();
+          $scope.newTask ="" ;
+          $scope.isErrDuplicat = false ;
+        }
+        else{
+          $scope.isErrDuplicat = true ;
+        }
       }
     };
+
+
 
     function hp(){
       console.log('hp') ;

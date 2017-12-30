@@ -1,11 +1,21 @@
 *{
   box-sizing: border-box ;
 } 
+
+body{
+  font-family: 'Roboto' , sans-serif ;
+}
 .frm-new{background-color: #f7f7f7;padding:25px 16px ;text-align: center ; box-shadow: 1px 1px 2px rgba(102, 102, 102, 0.5) ; margin-bottom: 16px ;}
 .txt-new{width: 100% ; padding: 4px 1rem 4px 0 ; text-indent: 1rem ; background-color: transparent ; border: none ; color: black ; border-bottom : 1px solid rgb(218, 218, 218); }
 .txt-new:focus{outline: none; border-bottom: 1px solid rgb(119, 119, 119)}
 
-
+.error{
+  color: rgb(212, 105, 105) ;
+  text-align: left ;
+  margin-bottom: 0 ;
+  font-size: .8rem ;
+  
+}
  .container {
    padding: 16px;
    max-width: 600px;
@@ -30,13 +40,18 @@
    margin: 0;
  }
 
+ h2[contenteditable=true]{
+  border-bottom:1px solid #5a5a5a ;
+  color: #52b952 ;
+ }
+
  .controls {
    float: right;
  }
 
  .controls svg {
    fill: #a3a3a3;
-   width: 1rem;
+   height: 22px;
    padding: 0;
    margin: 0;
    padding: 2px;
@@ -50,3 +65,9 @@
  .controls svg.marked {
    fill: #52b952;
  }
+/* 
+@media screen and (max-width : 480px) {
+  .controls svg{
+    width: 1.5rem ;
+  }
+} */

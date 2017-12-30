@@ -11,9 +11,12 @@ app.directive("todo", function() {
           deleteTodo(todo);
           console.log(attrs) ;
           $scope.$emit('removeTask') ;
+          //$scope.$emit('editTask') ;
         }
       },
       controller: function($scope) {
+        $scope.isEditable = false ;
+        $scope.editable = function(){$scope.isEditable = !$scope.isEditable}
       }
 
     };

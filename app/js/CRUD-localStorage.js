@@ -5,11 +5,14 @@ if( !localStorage.todo ) localStorage.todo= '[]' ;
 /**
  * Add a todo inoto localStorage.
  * @param {string} todo.
+ * @returns {boolean} false :in case of duplicat | true : in succes
  */
 function addTodo(todo){
   var ls = JSON.parse(localStorage.todo) ;// Get array of stored  objects.
+  if(ls.indexOf(todo) != -1) return false;
   ls.push(todo) ; // Add todo to array.
   localStorage.todo = JSON.stringify(ls); // submit change to localStorage.
+  return true ;
 }
 /**
  * this functiondelete tod item from localStorage.todo.
@@ -64,14 +67,14 @@ function markAsUndone(done){
  * @returns {string[]} list of todos.
  */
 function getAllTodo(){
-  return JSON.parse(localStorage.todo);
+  return JSON.parse(localStorage.todo).reverse();
 }
 /**
  * get all completed tasks(A.K.A done) 
  * @returns {string[]} list of done
  */
 function getAllDone(){
-  return JSON.parse(localStorage.done);
+  return JSON.parse(localStorage.done).reverse() ;
 }
 function about(){
   return 'abachouch youssouf' ;
