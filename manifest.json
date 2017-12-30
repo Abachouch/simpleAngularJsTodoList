@@ -1,4 +1,5 @@
 {
+  "lang": "en-US",
     "short_name": "ngSampleTodo",
     "name": "AngularJs simple todo list",
     "display" : "standalone" ,
