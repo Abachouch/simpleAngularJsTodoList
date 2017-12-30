@@ -12,9 +12,10 @@
       {
         "src": "ng.png",
         "type": "image/png",
-        "sizes": "192x192"
+        "sizes": "512x512"
       }
     ],
     "start_url": "index.html"
-    ,"background_color": "#2196F3"
+    ,"background_color": "#2196F3",
+    "theme_color": "#2196F3"
   }
