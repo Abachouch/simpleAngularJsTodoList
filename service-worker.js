@@ -1,9 +1,9 @@
 
 var CACHE_NAME = 'ngSampleTodo';
 var urlsToCache = [
-  '/',
+  'https://abachouch.github.io/simpleAngularJsTodoList/' ,
+  './',
   'index.html',
-  '/index.html?launcher=false',
   '/app/style/style.css',
   'app/js/angular.min.js' ,
   'app/js/directives/task-directive.js',

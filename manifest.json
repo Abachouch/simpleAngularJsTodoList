@@ -3,6 +3,11 @@
     "short_name": "ngSampleTodo",
     "name": "AngularJs simple todo list",
     "display" : "standalone" ,
+    "serviceworker": {
+      "src": "service-worker.js",
+      "scope": "/",
+      "use_cache": true
+    },
     "icons": [
       {
         "src": "ng.png",
