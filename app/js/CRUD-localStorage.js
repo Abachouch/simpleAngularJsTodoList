@@ -31,9 +31,11 @@ function deleteTodo(todo){
  */
 function updateTodo(oldTodo , newTodo){
    var ls = JSON.parse(localStorage.todo) ;// Get array of stored  objects.
-   var index = ls.indexOf(todo) ; // Find the indx of oldTodo.
+   if(ls.indexOf(newTodo) != -1) return false ;//test if new todo is already exist
+   var index = ls.indexOf(oldTodo) ; // Find the indx of oldTodo.
    ls[index] = newTodo ; // Replace the oldTodo wicth newTodo.
   localStorage.todo = JSON.stringify(ls); // Submit change to localStorage.
+  return true ;
 }
 /**
  * this function deletes done from localStorafe.done

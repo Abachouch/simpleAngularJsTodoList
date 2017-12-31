@@ -1,70 +1,118 @@
-*{
-  box-sizing: border-box ;
-} 
-
-body{
-  font-family: 'Roboto' , sans-serif ;
+* {
+  box-sizing: border-box;
 }
-.frm-new{background-color: #f7f7f7;padding:25px 16px ;text-align: center ; box-shadow: 1px 1px 2px rgba(102, 102, 102, 0.5) ; margin-bottom: 16px ;}
-.txt-new{width: 100% ; padding: 4px 1rem 4px 0 ; text-indent: 1rem ; background-color: transparent ; border: none ; color: black ; border-bottom : 1px solid rgb(218, 218, 218); }
-.txt-new:focus{outline: none; border-bottom: 1px solid rgb(119, 119, 119)}
 
-.error{
-  color: rgb(212, 105, 105) ;
-  text-align: left ;
-  margin-bottom: 0 ;
-  font-size: .8rem ;
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+textarea {
+  font-family: 'Roboto' , sans-serif ;
+  border: none;
+  border-bottom: 1px solid rgb(218, 218, 218);
+  background-color: transparent;
+  width: 100%;
+  padding: 4px 1rem;
+  color: black;
+  resize: none ;
+  overflow : none;
   
 }
- .container {
-   padding: 16px;
-   max-width: 600px;
-   margin: 0 auto;
- }
 
- .task {
-   color: #272727;
-   padding: 16px;
-   background-color: #f0f0f0;
-   font-family: "Roboto", sans-serif;
-   overflow: auto;
-   width: 100% ;
-   margin: 10px 0 ;
+textarea:focus {
+  outline: none;
+  border-bottom: 1px solid rgb(119, 119, 119) ;
+  resize: vertical ;
 }
 
- h2 {
-   font-size: 1rem;
-   font-weight: 400;
-   width: calc(100% - 80px);
-   float: left;
-   margin: 0;
- }
 
- h2[contenteditable=true]{
-  border-bottom:1px solid #5a5a5a ;
-  color: #52b952 ;
- }
+textarea[readonly] , textarea[readonly]:focus{
+  font-size: 1rem;
+  font-weight: 400;
+  border: none ;
+  resize: none;
 
- .controls {
-   float: right;
- }
+}
 
- .controls svg {
-   fill: #a3a3a3;
-   height: 22px;
-   padding: 0;
-   margin: 0;
-   padding: 2px;
-   cursor: pointer;
- }
+input[class^="btn"]{
+  background-color: royalblue;
+  border: none;
+  border-radius: 2px;
+  padding: 6px 20px ;
+  color: #f0f0f0;
+  font-size: .9rem;
+}
 
- svg:hover {
-   fill: #5a5a5a;
- }
+/*****************************/
 
- .controls svg.marked {
-   fill: #52b952;
- }
+.frm-new {
+  background-color: #f7f7f7;
+  padding: 35px 16px;
+  text-align: center;
+  box-shadow: 1px 1px 2px rgba(102, 102, 102, 0.5);
+  margin-bottom: 16px;
+}
+
+.error {
+  color: rgb(212, 105, 105);
+  text-align: left;
+  margin-bottom: 0;
+  font-size: .8rem;
+}
+
+.btn-new {
+  /** TODO edit background-color **/
+  float: right;
+}
+
+.container {
+  padding: 16px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.task {
+  color: #272727;
+  padding: 16px;
+  background-color: #f0f0f0;
+  font-family: "Roboto", sans-serif;
+  overflow: auto;
+  margin: 10px 0;
+}
+.frm-task{
+  width: calc(100% - 120px);
+  float: left;
+}
+.btn-edit{
+  margin-top: 8px ;
+}
+.controls {
+  float: right;
+}
+
+.controls svg {
+  fill: #a3a3a3;
+  height: 22px;
+  margin: 0;
+  padding: 2px 8px;
+  cursor: pointer;
+}
+
+
+svg:hover {
+  fill: #5a5a5a;
+}
+
+.controls svg.is-editable{
+  /* TODO Edit fill color **/
+  fill : blue ;
+}
+
+.controls svg.marked {
+  fill: #52b952;
+}
+
+
 /* 
 @media screen and (max-width : 480px) {
   .controls svg{

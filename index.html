@@ -22,8 +22,9 @@
   <div class="container" ng-app="todo" ng-controller="manageTodo">
 
     <form ng-submit="saveTodo()" class="frm-new">
-      <input class="txt-new" type="text" ng-model="newTask" placeholder="add new task" >
+      <textarea class="txt-new" type="text" ng-model="newTask" placeholder="add new task" ></textarea>
       <p class="error" ng-if="isErrDuplicat" ng-click="hideErrDuplica()" >Todo already exist !</p>
+      <input type="submit" class="btn-new" value="Save" />
     </form>
 
     <todo ng-repeat="t in allTodo" task="t"></todo>
