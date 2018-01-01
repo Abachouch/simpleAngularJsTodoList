@@ -1,4 +1,6 @@
 app.controller('manageTodo', function($scope) {
+    $scope.viewTitle = 'Todo List' ;
+    $scope.isSidenavVisible = false;
     $scope.isEditable = false ;
     $scope.isErrDuplicat = false;
     $scope.hideErrDuplica = function(){$scope.isErrDuplicat = false;}

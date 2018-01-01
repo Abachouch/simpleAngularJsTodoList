@@ -6,6 +6,83 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+img{
+  width: 100% ;
+  display: block ;
+}
+ul{list-style: none ;
+padding: 0 ;}
+
+.main-header{
+  background-color: #2196F3 ;
+  position: fixed ;
+  top: 0 ; 
+  left: 0 ;
+  right: 0 ;
+  padding: 8px ;
+}
+.sidenav-toggle{display: inline-block ; margin-left: 8px ; cursor: pointer ;}
+.sidenav-toggle:hover{fill : rgb(233, 233, 233) ;}
+.main-header>h1{
+font-size: .9rem;
+color: rgb(245, 244, 244) ;
+margin: 0;margin-left: 16px ;
+display: inline-block ;
+vertical-align: .45rem; 
+}
+
+/** sideNav ***/
+.darkbg{
+  background-color: #333333e7 ;
+  position: fixed ;
+  width: 100% ;
+  height: 100% ;
+  top: 0;
+  right: 0 ;
+  left: 0 ;
+  bottom: 0 ;
+  z-index: 98 ;
+}
+.sidenav{
+  position: fixed ;
+  z-index: 99 ;
+  height: 100vh ;
+  width: 250px ;
+  top: 0 ;
+  left: 0 ;
+  background-color: rgb(248, 248, 248) ;
+  overflow: auto ;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3) ;
+}
+.sidenav>header{text-align: center ;
+  background-color: rgb(253, 253, 253) ;
+padding: 16px ;}
+.sidenav>header>img{
+  width: 100px ;
+  margin: 0 auto ;
+}
+.sidenav>header>h1{
+  color: rgb(37, 37, 37) ;
+  font-size: 1rem ;
+  margin: 0 ;
+}
+.sidenav>ul>li{
+  padding: 16px 16px ;
+}
+
+.sidenav>ul>li{
+  
+  margin: 1px 0 ;
+font-weight: 700 ;
+}
+.sidenav>ul>li:hover{
+  background-color: #f0f0f0 ;
+}
+.sidenav>ul>li>svg{
+  fill : rgb(37, 37, 37) ;
+  vertical-align: -6px ;
+  margin-right: 16px ;
+}
 textarea {
   font-family: 'Roboto' , sans-serif ;
   border: none;
