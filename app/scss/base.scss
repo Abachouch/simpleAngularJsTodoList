@@ -1,0 +1,55 @@
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Roboto' , sans-serif ;
+}
+img{
+    width: 100% ;
+}
+ul{
+    padding: 0 ;
+}
+
+textarea {
+    font-family: 'Roboto' , sans-serif ;
+    border: none;
+    border-bottom: 1px solid rgb(218, 218, 218);
+    background-color: transparent;
+    width: 100%;
+    padding: 4px 1rem;
+    color: black;
+    resize: none ;
+    overflow : none;
+    
+  }
+  
+  textarea:focus {
+    outline: none;
+    border-bottom: 1px solid rgb(119, 119, 119) ;
+    resize: vertical ;
+  }
+  
+  
+  textarea[readonly] , textarea[readonly]:focus{
+    font-size: 1rem;
+    font-weight: 400;
+    border: none ;
+    resize: none;
+  
+  }
+  
+  input[type="submit"]{
+    background-color: royalblue;
+    border: none;
+    border-radius: 2px;
+    padding: 6px 20px ;
+    color: #f0f0f0;
+    font-size: .9rem;
+  }
+  

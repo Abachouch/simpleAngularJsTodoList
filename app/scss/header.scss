@@ -1,0 +1,40 @@
+/** header **/
+#header {
+    position: fixed;
+    background-color: $clr-theme;
+    left: 0 ;
+    right: 0;
+    top: 0;
+    height: 50px;
+    z-index: 97 ;
+    .toggle-aside{
+        fill: $clr-white ;
+        width: 24px ;
+        vertical-align: -7px ;
+        margin-left: 16px ;
+        cursor: pointer ;
+    }
+    .title{
+        font-size: 1rem ;
+        display: inline-block ;
+        color: $clr-white ;
+        letter-spacing: 1px ;
+        margin-left: 16px ;
+    }
+}
+
+@media screen and (min-width: $size-breakpoint) {
+    #header{
+        position: fixed ;
+        left: $size-aside-desktop ;
+        background-color: transparent ;
+        .toggle-aside{
+            fill : $clr-theme ;
+            display: none ;
+        }
+        .title{
+            color: $clr-theme ;
+        }
+    }
+    
+}

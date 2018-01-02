@@ -1,6 +1,6 @@
 app.controller('manageTodo', function($scope) {
     $scope.viewTitle = 'Todo List' ;
-    $scope.isSidenavVisible = false;
+    $scope.isHide = true ;
     $scope.isEditable = false ;
     $scope.isErrDuplicat = false;
     $scope.hideErrDuplica = function(){$scope.isErrDuplicat = false;}
@@ -26,10 +26,5 @@ app.controller('manageTodo', function($scope) {
       }
     };
 
-
-
-    function hp(){
-      console.log('hp') ;
-    }
     
   });
