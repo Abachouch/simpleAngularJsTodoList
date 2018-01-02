@@ -1,5 +1,5 @@
 
-  app.controller('todoCtrl' , function($scope){
+angular.module('todoApp').controller('todoCtrl' , function($scope){
     $scope.viewTitle = 'Todo List' ;
     $scope.isEditable = false ;
     $scope.isErrDuplicat = false;

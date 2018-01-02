@@ -2,9 +2,10 @@ app.directive("todo", function() {
   
     return {
       restrict: "E",
-      templateUrl: "app/js/directives/task-template.html",
+      templateUrl: "app/directives/taskTemplate.html",
       scope: {
-        title: '=task'
+        title: '=task' ,
+        type: '=type'
       },
       link: function($scope, elem, attrs) {
         $scope.delete_todo = function(todo) {
@@ -38,4 +39,3 @@ app.directive("todo", function() {
       }
     };
   });
-
