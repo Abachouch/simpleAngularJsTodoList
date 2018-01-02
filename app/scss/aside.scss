@@ -29,27 +29,34 @@
     }
     .aside_nav {
         li {
-            cursor: pointer;
-            padding: 16px;
-            font-weight: 700;
+            
+            
+            
+            
+            a{
+                font-weight: 700;
             font-size: .9rem;
             margin: 1px 0;
             color: $clr-gray1;
             transition: background-color 500ms ease-out;
-            .icon {
-                width: 22px;
-                width: 1rem;
-                vertical-align: -3px;
-                margin-right: 16px;
-                fill: $clr-gray1;
-            }
-            &:hover {
-                background-color: aliceblue;
-                color: $clr-black;
+                padding: 16px;
+                display: block ;
                 .icon {
-                    fill: $clr-black;
+                    width: 22px;
+                    width: 1rem;
+                    vertical-align: -3px;
+                    margin-right: 16px;
+                    fill: $clr-gray1;
+                }
+                &:hover {
+                    background-color: aliceblue;
+                    color: $clr-black;
+                    .icon {
+                        fill: $clr-black;
+                    }
                 }
             }
+            
         }
     }
 }

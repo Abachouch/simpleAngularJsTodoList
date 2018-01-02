@@ -12,6 +12,9 @@ img {
 ul {
   padding: 0; }
 
+a {
+  text-decoration: none; }
+
 textarea {
   font-family: "Roboto", sans-serif;
   border: none;
@@ -77,24 +80,24 @@ input[type="submit"] {
     #aside .aside_header .aside_header-title {
       font-size: .9rem;
       font-weight: 700; }
-  #aside .aside_nav li {
-    cursor: pointer;
-    padding: 16px;
+  #aside .aside_nav li a {
     font-weight: 700;
     font-size: .9rem;
     margin: 1px 0;
     color: #7c7c7c;
-    transition: background-color 500ms ease-out; }
-    #aside .aside_nav li .icon {
+    transition: background-color 500ms ease-out;
+    padding: 16px;
+    display: block; }
+    #aside .aside_nav li a .icon {
       width: 22px;
       width: 1rem;
       vertical-align: -3px;
       margin-right: 16px;
       fill: #7c7c7c; }
-    #aside .aside_nav li:hover {
+    #aside .aside_nav li a:hover {
       background-color: aliceblue;
       color: #2c2c2c; }
-      #aside .aside_nav li:hover .icon {
+      #aside .aside_nav li a:hover .icon {
         fill: #2c2c2c; }
 
 .dark-bg {
