@@ -38,20 +38,15 @@ textarea {
   }
   
   
-  textarea[readonly] , textarea[readonly]:focus{
-    font-size: 1rem;
-    font-weight: 400;
-    border: none ;
-    resize: none;
   
-  }
   
   input[type="submit"]{
-    background-color: royalblue;
+    background-color: $clr-blue1;
     border: none;
     border-radius: 2px;
     padding: 6px 20px ;
     color: #f0f0f0;
     font-size: .9rem;
+    cursor: pointer ;
   }
   

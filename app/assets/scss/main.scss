@@ -2,6 +2,11 @@ $clr-theme : #54bce6;
 $clr-black : #2c2c2c ;
 $clr-white : #fdfdfd ;
 $clr-white2 : #f8f8f8 ;
+$clr-white3 :#f0f0f0 ;
+$clr-red1 :#dd2727 ;
+$clr-green1 : #33a333 ;
+$clr-blue1 : #226aee ;
+
 
 $clr-gray1 : #7c7c7c;
 $clr-gray2 :#5e5e5e;
@@ -18,3 +23,4 @@ $size-aside-mobile : 400px ;
 @import 'aside' ;
 @import 'header' ;
 @import 'content' ;
+@import 'task' ;

@@ -9,7 +9,7 @@
       "use_cache": true
     },
     "icons": [
-      {
+      { 
         "src": "ng.png",
         "type": "image/png",
         "sizes": "512x512"

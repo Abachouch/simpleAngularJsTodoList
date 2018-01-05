@@ -4,7 +4,7 @@ var CACHE_NAME = 'ngSampleTodo';
 //var urlsToCache = [
 //  './',
 //  'index.html',
-//  //assets
+//  //assets 
 //  //////style
 //  'app/assets/style/main.css',
 //  //////icons

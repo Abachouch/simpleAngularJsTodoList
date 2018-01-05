@@ -1,69 +1,28 @@
 /** main **/
-#main {
-    margin-left: 0;
-    padding-top: 60px;
-    background-color: $clr-white;
-    height: 100vh; 
-    overflow: auto;
-    
-/*****************************/
 
-.frm-new {
-    background-color: #f7f7f7;
-    padding: 35px 16px;
-    text-align: center;
-    box-shadow: 1px 1px 2px rgba(102, 102, 102, 0.5);
+#main {
+  margin-left: 0;
+  margin-top: 50px;
+  background-color: $clr-white;
+  height: 100vh;
+  overflow: auto;
+  /*****************************/
+  .frm-new {
+    background-color: $clr-white2;
+    padding: 20px 16px 10px;
+    text-align: right;
+    box-shadow: $shadow1;
     margin-bottom: 16px;
-  }
-  
-  
-  
-  .btn-new {
-    /** TODO edit background-color **/
-    float: right;
-  }
-  
-  .task {
-    color: #272727;
-    padding: 16px;
-    background-color: #f0f0f0;
-    font-family: "Roboto", sans-serif;
-    overflow: auto;
-    margin: 10px 0;
-  }
-  .frm-task{
-    width: calc(100% - 120px);
-    float: left;
-  }
-  .btn-edit{
-    margin-top: 8px ;
-  }
-  .controls {
-    float: right;
-  }
-  
-  .controls svg {
-    fill: #a3a3a3;
-    height: 22px;
-    margin: 0;
-    padding: 2px 8px;
-    cursor: pointer;
-  }
-  
-  .controls svg.is-editable{
-    /* TODO Edit fill color **/
-    fill : blue ;
-  }
-  
-  .controls svg.marked {
-    fill: #52b952;
+    .btn-new {
+      /** TODO edit background-color **/
+      display: inline-block;
+    }
   }
   
 }
 
 @media screen and (min-width: $size-breakpoint) {
-  
-    #main {
-        margin-left: $size-aside-desktop ;
-    }
+  #main {
+    margin-left: $size-aside-desktop;
+  }
 }

@@ -1,0 +1,63 @@
+/*****task*********/
+
+.task {
+    color: $clr-black;
+    padding: 16px;
+    background-color: $clr-white3;
+    margin: 10px 0;
+    .frm-task {
+        .btn-edit {
+            margin-top: 8px;
+            display: none;
+        }
+        .error {
+            display: none;
+        }
+    }
+    .controls {
+        text-align: right;
+        .icon {
+            fill: $clr-gray1;
+            height: 20px;
+            margin-left: 22px;
+            cursor: pointer;
+            &:hover {
+                fill: $clr-black;
+            }
+            &.mark {
+                &:hover {
+                    fill: $clr-green1;
+                }
+            }
+            &.unmark {
+                &:hover {
+                    fill: $clr-gray1;
+                }
+            }
+        }
+    }
+    &.editable {
+        .controls icon.edit {
+            fill: $clr-blue1;
+        }
+        .btn-edit {
+            display: inline-block;
+        }
+    }
+}
+
+.ta-edit {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    border: none;
+    overflow: hidden;
+    color: rebeccapurple;
+}
+
+.task.editable {
+    .ta-edit,
+    .ta-edit:focus {
+        font-weight: 400;
+        border-bottom: 1px $clr-gray1 solid;
+    }
+}

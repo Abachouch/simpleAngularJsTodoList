@@ -30,6 +30,9 @@ function deleteTodo(todo){
  * @param {string} newTodo - the new value.
  */
 function updateTodo(oldTodo , newTodo){
+  if(oldTodo == newTodo) return true ;
+  console.log('old :'+oldTodo) ;
+  console.log('new :'+newTodo) ;
    var ls = JSON.parse(localStorage.todo) ;// Get array of stored  objects.
    if(ls.indexOf(newTodo) != -1) return false ;//test if new todo is already exist
    var index = ls.indexOf(oldTodo) ; // Find the indx of oldTodo.
