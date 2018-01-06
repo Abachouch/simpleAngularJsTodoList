@@ -163,9 +163,13 @@ input[type="submit"] {
     text-align: right;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.412);
     margin-bottom: 16px; }
-    #main .frm-new .btn-new {
-      /** TODO edit background-color **/
-      display: inline-block; }
+    #main .frm-new .txt-new {
+      height: 100px;
+      transition-property: height;
+      transition-duration: 1s;
+      transform-style: flat; }
+    #main .frm-new:hover .txt-new {
+      height: 200px; }
 
 @media screen and (min-width: 700px) {
   #main {
@@ -181,6 +185,16 @@ input[type="submit"] {
     display: none; }
   .task .frm-task .error {
     display: none; }
+  .task pre {
+    width: 100%;
+    white-space: pre-line; }
+  .task .title {
+    font-size: 1.1rem;
+    font-family: "Roboto", sans-serif;
+    line-height: 2rem;
+    border: none;
+    color: #2c2c2c;
+    word-wrap: break-word; }
   .task .controls {
     text-align: right; }
     .task .controls .icon {
@@ -198,17 +212,8 @@ input[type="submit"] {
     fill: #226aee; }
   .task.editable .btn-edit {
     display: inline-block; }
-
-.ta-edit {
-  font-size: 1.2rem;
-  line-height: 1.5rem;
-  border: none;
-  overflow: hidden;
-  color: rebeccapurple; }
-
-.task.editable .ta-edit,
-.task.editable .ta-edit:focus {
-  font-weight: 400;
-  border-bottom: 1px #7c7c7c solid; }
+  .task.editable .title {
+    border-bottom: 1px #5e5e5e solid;
+    color: #5e5e5e; }
 
 /*# sourceMappingURL=main.css.map */

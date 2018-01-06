@@ -1,11 +1,11 @@
 <div ng-controller="todoCtrl">
     <header>
         <h1 class="app-title">{{viewTitle}}</h1>
-    </header>
+    </header> 
     <form ng-submit="saveTodo()" class="frm-new">
         <textarea class="txt-new" type="text" ng-model="newTask" placeholder="add new task"></textarea>
         <p class="error" ng-if="isErrDuplicat" ng-click="hideErrDuplica()">Todo already exist !</p>
         <input type="submit" class="btn-new" value="Save" />
     </form>
-    <todo ng-repeat="t in allTodo" task="t"></todo>
+    <todo ng-repeat="t in allTodo" task="t" type="'todo'" ></todo>
 </div>

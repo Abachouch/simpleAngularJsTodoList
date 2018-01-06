@@ -14,6 +14,20 @@
             display: none;
         }
     }
+    pre{
+        width:  100% ;
+        
+        white-space: pre-line ;
+        
+    }
+    .title{
+        font-size: 1.1rem;
+        font-family: 'Roboto' , sans-serif ;
+        line-height: 2rem;
+        border: none;
+        color: $clr-black;
+        word-wrap: break-word ;
+    }
     .controls {
         text-align: right;
         .icon {
@@ -43,21 +57,14 @@
         .btn-edit {
             display: inline-block;
         }
+        .title{
+            border-bottom: 1px $clr-gray2 solid ;
+            color: $clr-gray2 ;
+        }
     }
 }
 
-.ta-edit {
-    font-size: 1.2rem;
-    line-height: 1.5rem;
-    border: none;
-    overflow: hidden;
-    color: rebeccapurple;
-}
 
-.task.editable {
-    .ta-edit,
-    .ta-edit:focus {
-        font-weight: 400;
-        border-bottom: 1px $clr-gray1 solid;
-    }
-}
+
+
+

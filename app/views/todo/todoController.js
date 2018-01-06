@@ -8,7 +8,7 @@ angular.module('todoApp').controller('todoCtrl' , function($scope){
     $scope.allTodo = getAllTodo();
 
     //delete todo
-    $scope.$on('removeTask' , function(){
+    $scope.$on('refresh' , function(){
       $scope.allTodo = getAllTodo();
     });
     //save todo
