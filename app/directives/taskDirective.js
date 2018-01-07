@@ -13,14 +13,18 @@ app.directive("todo", function () {
       titleHolder.innerHTML = $scope.title; //set title to his holder.
       var oldTitle ; //initiat original title.
       $scope.isErrDuplicat = false;//hide error message in init stat.
+
       /**
        * delete todo from localstraage
        * @param {*todo} todo 
        */
       $scope.delete_todo = function (todo) {
         
-        deleteTodo(todo);
-        
+        switch($scope.type){
+          case 'todo' : deleteTodo(todo) ; break ;
+          case 'done' : deleteDone(todo) ; break ;
+        }
+                
         $scope.$emit('refresh');
       }
     
@@ -37,13 +41,15 @@ app.directive("todo", function () {
        * update todo in lcalstorage
        */
       $scope.edit = function(){
-        $scope.isEditable = updateTodo(oldTitle, titleHolder.innerHTML);
-        if(updateTodo(oldTitle, titleHolder.innerHTML)){
-          $scope.isEditable = false; 
-          oldTitle = null ;
-          $scope.isErrDuplicat = false ; 
-        }
-        else $scope.isErrDuplicat = true;
+        
+        if($scope.type ===  'todo'){
+          if(updateTodo(oldTitle, titleHolder.innerHTML)){
+            $scope.isEditable = false; 
+            oldTitle = null ;
+            $scope.isErrDuplicat = false ; 
+          }
+          else $scope.isErrDuplicat = true;
+        }        
       }
 
       $scope.toggleTask = function(todo) {

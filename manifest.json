@@ -10,7 +10,7 @@
     },
     "icons": [
       { 
-        "src": "ng.png",
+        "src": "app/assets/icon.png",
         "type": "image/png",
         "sizes": "512x512"
       }

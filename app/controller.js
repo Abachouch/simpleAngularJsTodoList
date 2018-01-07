@@ -1,5 +1,7 @@
 var app = angular.module('todoApp');
 app.controller('manageTodo', function($scope) {
-    $scope.isHide = true ;        
+  $scope.appTitle = 'TODO' ;
+    $scope.isHide = true ;       
+
   });
 

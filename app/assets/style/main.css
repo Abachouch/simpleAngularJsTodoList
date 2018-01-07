@@ -10,7 +10,9 @@ img {
   width: 100%; }
 
 ul {
-  padding: 0; }
+  padding: 0;
+  margin: 0;
+  list-style: none; }
 
 a {
   text-decoration: none; }
@@ -176,6 +178,7 @@ input[type="submit"] {
     margin-left: 250px; } }
 /*****task*********/
 .task {
+  position: relative;
   color: #2c2c2c;
   padding: 16px;
   background-color: #f0f0f0;
@@ -190,7 +193,7 @@ input[type="submit"] {
     white-space: pre-line; }
   .task .title {
     font-size: 1.1rem;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 2rem;
     border: none;
     color: #2c2c2c;

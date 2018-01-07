@@ -4,7 +4,7 @@
 <head>
 
   <link rel="manifest" href="manifest.json">
-
+  <base href="/" /> 
   <meta charset="UTF-8">
   <meta name="theme-color" content="#2196F3" />
   <meta name="mobile-web-app-capable" content="yes">
@@ -23,13 +23,13 @@
   <aside id="aside" ng-class="isHide ? 'is-hide' : ''">
     <header class="aside_header">
       <img class="aside_header-img" src="app/assets/icon.png" alt="icon">
-      <h1 class="aside_header-title">hello man</h1>
+      <h1 class="aside_header-title">AngularJS Simple Todo List</h1>
     </header>
     <nav class="aside_nav">
       <ul>
 
         <li>
-          <a href="/" ng-click="isHide = true">
+          <a href="/" ng-click="isHide = true ; appTitle = 'TODO'">
             <svg class="icon" fill="#000000" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path d="M0 0h24v24H0z" fill="none"/>
               <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/>
@@ -37,39 +37,13 @@
           </a>
         </li>
         <li >
-          <a href="/#!/done" ng-click="isHide = true">
+          <a href="/#!/done" ng-click="isHide = true  ;appTitle = 'DONE' ">
             <svg class="icon" fill="#000000" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path d="M0 0h24v24H0z" fill="none"/>
               <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
           </svg>DONE
           </a>
-          
         </li>
-        <li > 
-          <a href="/#!/pomodoro" ng-click="isHide = true">
-            <svg class="icon" fill="#000000" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/>
-              <path d="M0 0h24v24H0z" fill="none"/>
-              <path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
-          </svg>POMODORO
-          </a>
-          
-        </li>
-        <li >
-          <a href="/#!/statistics" ng-click="isHide = true" >
-            <svg class="icon" fill="#000000"  viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <defs>
-                  <path d="M0 0h24v24H0V0z" id="a"/>
-              </defs>
-              <clipPath id="b">
-                  <use overflow="visible" xlink:href="#a"/>
-              </clipPath>
-              <path clip-path="url(#b)" d="M23 8c0 1.1-.9 2-2 2-.18 0-.35-.02-.51-.07l-3.56 3.55c.05.16.07.34.07.52 0 1.1-.9 2-2 2s-2-.9-2-2c0-.18.02-.36.07-.52l-2.55-2.55c-.16.05-.34.07-.52.07s-.36-.02-.52-.07l-4.55 4.56c.05.16.07.33.07.51 0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2c.18 0 .35.02.51.07l4.56-4.55C8.02 9.36 8 9.18 8 9c0-1.1.9-2 2-2s2 .9 2 2c0 .18-.02.36-.07.52l2.55 2.55c.16-.05.34-.07.52-.07s.36.02.52.07l3.55-3.56C19.02 8.35 19 8.18 19 8c0-1.1.9-2 2-2s2 .9 2 2z"/>
-          </svg>STATISTICS
-          </a>
-          
-        </li>
-
       </ul>
     </nav>
   </aside>
@@ -78,7 +52,7 @@
       <path d="M0 0h24v24H0z" fill="none" />
       <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
     </svg>
-    <h2 class="title">title</h2>
+    <h2 class="title">{{appTitle}}</h2>
   </header>
 
   <main id="main">
@@ -92,24 +66,23 @@
 </body>
 
 <!-- Angular Libraries -->
-<script src="app/assets/js/angular.min.js"></script>
+<!-- <script src="app/assets/js/angular.min.js"></script>
 <script src="app/assets/js/angular-route.js"></script>
-<script src="app/assets/js/angular-sanitize.js"></script>
+<script src="app/assets/js/angular-sanitize.js"></script> -->
 <!-- App logic -->
 <!--data-->
-<script src="app/db/CRUD-localStorage.js"></script>
+<!-- <script src="app/db/CRUD-localStorage.js"></script> -->
 <!--module-->
-<script src="app/app.js"></script>
+<!-- <script src="app/app.js"></script> -->
 <!--controller-->
-<script src="app/controller.js"></script>
+<!-- <script src="app/controller.js"></script> -->
 <!--rooter-->
-<script src="app/router.js"></script>
+<!-- <script src="app/router.js"></script> -->
 <!--view-->
-<script src="app/views/done/doneController.js" ></script>
-<script src="app/views/todo/todoController.js" ></script>
+<!-- <script src="app/views/done/doneController.js" ></script>
+<script src="app/views/todo/todoController.js" ></script> -->
 <!--derictives-->
-<script src="app/directives/taskDirective.js"></script>
-<!-- <script src="app/directives/contentEditableDirective.js"></script> -->
+<!-- <script src="app/directives/taskDirective.js"></script> -->
 <!--service worker-->
 <script>
 //  if ('serviceWorker' in navigator) {

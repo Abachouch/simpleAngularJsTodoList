@@ -1,0 +1,32 @@
+{
+  "name": "ng-todolist",
+  "version": "1.0.0",
+  "description": "simple angularJS todo list ",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abachouch/simpleAngularJsTodoList.git"
+  },
+  "keywords": [
+    "AngularJS",
+    "PWA",
+    "LocalStorage"
+  ],
+  "author": "Abachouch Youssouf",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Abachouch/simpleAngularJsTodoList/issues"
+  },
+  "homepage": "https://github.com/Abachouch/simpleAngularJsTodoList#readme",
+  "devDependencies": {
+    "angular": "^1.6.8",
+    "webpack": "^3.10.0"
+  },
+  "dependencies": {
+    "angular-route": "^1.6.8"
+  }
+}

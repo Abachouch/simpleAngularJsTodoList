@@ -1,6 +1,7 @@
 /*****task*********/
 
 .task {
+    position: relative;
     color: $clr-black;
     padding: 16px;
     background-color: $clr-white3;
@@ -14,19 +15,17 @@
             display: none;
         }
     }
-    pre{
-        width:  100% ;
-        
-        white-space: pre-line ;
-        
+    pre {
+        width: 100%;
+        white-space: pre-line;
     }
-    .title{
+    .title {
         font-size: 1.1rem;
-        font-family: 'Roboto' , sans-serif ;
+        font-family: 'Roboto', sans-serif;
         line-height: 2rem;
         border: none;
         color: $clr-black;
-        word-wrap: break-word ;
+        word-wrap: break-word;
     }
     .controls {
         text-align: right;
@@ -57,14 +56,12 @@
         .btn-edit {
             display: inline-block;
         }
-        .title{
-            border-bottom: 1px $clr-gray2 solid ;
-            color: $clr-gray2 ;
+        .title {
+            border-bottom: 1px $clr-gray2 solid;
+            color: $clr-gray2;
         }
     }
+   
+     
+    
 }
-
-
-
-
-
