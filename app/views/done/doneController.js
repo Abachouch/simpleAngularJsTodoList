@@ -1,9 +1,8 @@
-angular.module('todoApp').controller('doneCtrl' , function($scope){
-    $scope.allDone = getAllDone();
+angular.module('todoApp')
+.controller('doneCtrl' , function($scope){
+    $scope.allDone = getAllDone();//delete todo
+    $scope.$on('refresh' , function(){
+      $scope.allDone = getAllDone();
+    });
     
-    $scope.markUndone = function(task){
-    }
-
-    $scope.delete = function(){
-    }
   });
