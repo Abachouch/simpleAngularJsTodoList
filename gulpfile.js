@@ -18,7 +18,7 @@ var sass          = require('gulp-sass');
 
 // Where our files are located
 var jsFiles   = "app/**/*.js";
-var viewFiles = "app/**/*.html";
+var viewFiles = "app/views/*.html";
 var scssFiles = "app/assets/scss/**/*.scss" ;
 
 
@@ -61,7 +61,7 @@ gulp.task('views', function() {
       }))
       .on('error', interceptErrors)
       .pipe(rename("app.templates.js"))
-      .pipe(gulp.dest('./app/js/config/'));
+      .pipe(gulp.dest('./app/'));
 });
 
 // This task is used for building production ready
@@ -69,13 +69,19 @@ gulp.task('views', function() {
 gulp.task('build', ['html', 'browserify'], function() {
   var html = gulp.src("build/index.html")
                  .pipe(gulp.dest('./dist/'));
-
+  
   var js = gulp.src("build/main.js")
                .pipe(uglify())
                .pipe(gulp.dest('./dist/'));
 
   return merge(html,js);
 });
+
+gulp.task('images', function () {
+  return gulp.src("app/assets/**/*.png")
+   .pipe(gulp.dest('./build/assets/'));
+ });
+
 
 
 gulp.task('sass', function () {
@@ -86,7 +92,7 @@ gulp.task('sass', function () {
   .pipe(gulp.dest('./build/css'));
 });
 
-gulp.task('default', ['html', 'browserify', 'sass'], function() {
+gulp.task('default', ['html', 'browserify', 'sass','images'], function() {
 
   browserSync.init(['./build/**/**.**'], {
     server: "./build",
