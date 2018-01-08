@@ -1,7 +1,7 @@
 app.directive("todo", function () {
   return {
     restrict: "E",
-    templateUrl: "app/directives/taskTemplate.html",
+    templateUrl: "static/taskTemplate.html",
     scope: {
       title: '=task',
       type: '=type'
