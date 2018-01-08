@@ -78,7 +78,7 @@ gulp.task('build', ['html', 'browserify'], function() {
 });
 
 gulp.task('images', function () {
-  return gulp.src("app/assets/**/*.png")
+  return gulp.src(["app/assets/**/*.png" ,"app/assets/**/*.icon"  ])
    .pipe(gulp.dest('./build/assets/'));
  });
 
