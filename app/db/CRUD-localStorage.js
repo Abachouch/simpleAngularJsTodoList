@@ -1,13 +1,15 @@
 
+module.exports {
 //init localstorage if not exist
-if( !localStorage.done ) localStorage.done= '[]' ;
-if( !localStorage.todo ) localStorage.todo= '[]' ;
+
+
 /**
  * Add a todo to localStorage.
  * @param {string} todo.
  * @returns {boolean} false :in case of duplicat | true : in succes
  */
-function addTodo(todo){
+addTodo :function(todo){
+  if( !localStorage.todo ) localStorage.todo= '[]' ;
   var ls = JSON.parse(localStorage.todo) ;// Get array of stored  objects.
   var lsTodo = JSON.parse(localStorage.done);
   if(ls.indexOf(todo) != -1 || lsTodo.indexOf(todo) != -1) return false;//test if todo is alreadyin both "ls.todo" and "ls.done" exist then return false.
@@ -20,6 +22,7 @@ function addTodo(todo){
  * @param {string} todo.
  */
 function deleteTodo(todo){
+  if( !localStorage.todo ) localStorage.todo= '[]' ;
   var ls = JSON.parse(localStorage.todo) ;// Get array of stored  objects.
   var index = ls.indexOf(todo) ; // Find the indx of todo.
   ls.splice(index , 1 ) ; // Delete the todo item in ls array (locally).
@@ -31,6 +34,7 @@ function deleteTodo(todo){
  * @param {string} newTodo - the new value.
  */
 function updateTodo(oldTodo , newTodo){
+  if( !localStorage.todo ) localStorage.todo= '[]' ;
   if(oldTodo == newTodo) return true ;
   console.log('old :'+oldTodo) ;
   console.log('new :'+newTodo) ;
@@ -46,6 +50,7 @@ function updateTodo(oldTodo , newTodo){
  * @argument {string} done - the item to be deleted.
  */
 function deleteDone(done){
+  if( !localStorage.done ) localStorage.done= '[]' ;
   var ls = JSON.parse(localStorage.done) ; // Get array of stored  objects.
   var index = ls.indexOf(done) ; // Find the indx of done.
   ls.splice(index , 1 ) ;// Delete the done item in ls array (locally).
@@ -56,6 +61,7 @@ function deleteDone(done){
  * @param {string} done.
  */
 function addDone(done){
+  if( !localStorage.done ) localStorage.done= '[]' ;
   var ls = JSON.parse(localStorage.done) ;// Get array of stored  objects.
   if(ls.indexOf(done) != -1) return false ;//test if done already exist then return false.
   ls.push(done) ; // Add done to array.
@@ -74,6 +80,7 @@ function markAsUndone(done){
  * @returns {string[]} list of todos.
  */
 function getAllTodo(){
+  if( !localStorage.todo ) localStorage.todo= '[]' ;
   return JSON.parse(localStorage.todo).reverse();
 }
 /**
@@ -81,5 +88,8 @@ function getAllTodo(){
  * @returns {string[]} list of done
  */
 function getAllDone(){
+  if( !localStorage.done ) localStorage.done= '[]' ;
   return JSON.parse(localStorage.done).reverse() ;
+}
+
 }

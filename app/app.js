@@ -1,6 +1,6 @@
 //import {crudLocalStorage} from './db/CRUD-localStorage' ;
 
-//var greetings = require("./db/CRUD-localStorage");
+require("./db/CRUD-localStorage");
 import angular from 'angular' ;
 import ngRoute from 'angular-route'
 
@@ -8,16 +8,8 @@ import ngRoute from 'angular-route'
 import './app.templates';
 
 
-// Create and bootstrap application
-const requires = [
-    'ui.router',
-    'templates',
-
-  ];
-  
-
 //
-var app = angular.module('todoApp', ["ngRoute"])
+var app = angular.module('todoApp', ["ngRoute" , "templates"])
 .controller('manageTodo', function($scope) {
     $scope.appTitle = 'TODO' ;
       $scope.isHide = true ;       
